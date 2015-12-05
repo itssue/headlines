@@ -9,7 +9,11 @@ class ApplicationController < ActionController::Base
 
     def configure_permitted_parameters
         devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password) }
-    	devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:mobile_number, :email, :password, :current_password) }
+    	devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:mobile_number, :email, :password) }
 	end
+
+	def update_resource(resource, params)
+    	resource.update_without_password(params)
+  	end
 
 end

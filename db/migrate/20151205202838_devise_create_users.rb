@@ -5,8 +5,12 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.string   :mobile_number
+      
       t.string   :verification_code
       t.boolean  :is_verified
+      # Create verification code when there's time!
+      # http://twilioinc.wpengine.com/2015/06/sms-phone-verification-in-rails-4-using-ajax-and-twilio.html
+      # http://fullstackstanley.com/read/verifying-mobile-phone-numbers-with-rails-devise-and-twilio
 
       ## Recoverable
       t.string   :reset_password_token

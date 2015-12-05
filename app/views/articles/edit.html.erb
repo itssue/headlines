@@ -1,0 +1,23 @@
+<h1>Edit New Article</h1>
+
+<%= form_for @article do |f| %>
+  <p>
+    Title<br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    Link<br>
+    <%= f.text_field :link %>
+  </p>
+
+  <p>
+    Gif<br>
+    <%= f.text_field :gif %>
+  </p>
+
+  <p>
+    <%= f.submit 'Update Article'%>
+  </p>
+
+<% end %>

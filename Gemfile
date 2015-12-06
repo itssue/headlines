@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
 gem 'devise'
 gem 'twilio-ruby', '~> 4.2.1'
 

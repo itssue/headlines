@@ -3,6 +3,7 @@
 <strong>Title:</strong> <%= @article.title %><br>
 <strong>Link:</strong> <%= @article.link %><br>
 <strong>Gif:</strong> <%= @article.gif %><br>
+<%= link_to "Send Text", notifications_path(article_id: @article.id), method: :post %>
 <%= link_to "Edit", edit_article_path %>
 
 <br>

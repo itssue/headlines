@@ -3,12 +3,11 @@
 
 
 	<% if user_signed_in? %>
+		<p>Thank you for signing up.</p>
 		<%= link_to('Edit', edit_user_registration_path) %> <br>
 		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
 	<% else %>
 		<p>If you're interested, sign up here.</p>
-
-
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 		  <%= devise_error_messages! %>
 		  
@@ -31,5 +30,6 @@
 		  </div>
 
 		<div><%= f.submit "Sign up" %></div>
+		<p>If you have already signed up, <%= link_to "sign in here.", user_session_path %>
 		<% end %>
 	<% end %>

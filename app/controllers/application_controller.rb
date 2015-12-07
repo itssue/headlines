@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  def ensure_admin!
+    redirect_to root_path unless current_user.admin?
+  end
+
   protected
 
     def configure_permitted_parameters

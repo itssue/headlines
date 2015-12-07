@@ -3,3 +3,5 @@ Twilio.configure do |config|
   config.auth_token = ENV['AUTH_TOKEN']
 end
 
+# http://twilio-ruby.readthedocs.org/en/latest/usage/messages.html
+# https://github.com/twilio/twilio-ruby

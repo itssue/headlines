@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :ensure_admin!
   
   def index
   	@articles = Article.all
@@ -30,14 +31,12 @@ class ArticlesController < ApplicationController
   def update
   	@article = Article.find(params[:id])
 
-	if @article.update(article_params)
-		redirect_to @article	
-	else
-		render 'edit'
-	end
-  
+  	if @article.update(article_params)
+  		redirect_to @article	
+  	else
+  		render 'edit'
+  	end
   end
-
 
   private
 

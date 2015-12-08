@@ -4,17 +4,17 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :mobile_number %><br />
-    <%= f.text_field :mobile_number, autofocus: true %>
+    <p>Mobile number (US numbers only. No hyphens or dashs, e.g. 1234567890.)<br />
+    <%= f.text_field :mobile_number, autofocus: true %></p>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <p>Email<br />
+    <%= f.email_field :email, autofocus: true %></p>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <p>Password
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />

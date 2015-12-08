@@ -1,14 +1,14 @@
 <h2>Sign in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="welcomeform">
+    <p>Email<br />
+    <%= f.email_field :email, autofocus: true, class: "form-control" %></p>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="welcomeform">
+    <p>Password<br />
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %></p>
   </div>
 
   <% if devise_mapping.rememberable? -%>

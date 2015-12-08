@@ -3,22 +3,22 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
+  <div class="welcomeform">
     <p>Mobile number <em>(US numbers only. No hyphens or dashs, e.g. 1234567890.)</em><br />
-    <%= f.text_field :mobile_number, autofocus: true %></p>
+    <%= f.text_field :mobile_number, autofocus: true, class: "form-control" %></p>
   </div>
 
-  <div class="field">
+  <div class="welcomeform">
     <p>Email<br />
-    <%= f.email_field :email, autofocus: true %></p>
+    <%= f.email_field :email, autofocus: true, class: "form-control" %></p>
   </div>
 
-  <div class="field">
+  <div class="welcomeform">
     <p>Password
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>
 
   <div class="actions">

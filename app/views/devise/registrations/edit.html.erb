@@ -3,14 +3,14 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
+  <div class="welcomeform">
     <p>Mobile number <em>(US numbers only. No hyphens or dashs, e.g. 1234567890.)</em><br />
-    <%= f.text_field :mobile_number %></p>
+    <%= f.text_field :mobile_number, class: "form-control" %></p>
   </div>
 
-  <div class="field">
+  <div class="welcomeform">
     <p>Email<br />
-    <%= f.email_field :email, autofocus: true %></p>
+    <%= f.email_field :email, autofocus: true, class: "form-control" %></p>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -21,14 +21,14 @@
 
   <p class="lead">Change password</p>
 
-  <div class="field">
+  <div class="welcomeform">
     <p>New Password <em>(leave blank if you don't want to change it)</em><br />
-    <%= f.password_field :password, autocomplete: "off" %></p>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %></p>
   </div>
 
-  <div class="field">
+  <div class="welcomeform">
     <p>Password Confirmation<br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></p>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></p>
   </div>
 
   <div class="actions">

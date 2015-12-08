@@ -1,13 +1,12 @@
-<h1>News is overwhelming.</h1>
-<p>News is overwhelming.</p>
-
+<h2>Keep up with the news with one text a day.</h2>
+<p class="lead">With Headlines, get a text every morning to stay up-to-date on news. Stop feeling overwhelmed by TV, magazines, websites, social media feeds, newsletters.</p> 
 
 	<% if user_signed_in? %>
 		<p>Thank you for signing up.</p>
 		<%= link_to('Edit', edit_user_registration_path) %> <br>
 		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
 	<% else %>
-		<p>If you're interested, sign up here.</p>
+		<p>Create an account to get started.</p>
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 		  <%= devise_error_messages! %>
 		  
@@ -29,7 +28,6 @@
 		  </p>
 		  </div>
 
-		<div><%= f.submit "Sign up" %></div>
-		<p>If you have already signed up, <%= link_to "sign in here.", user_session_path %>
+		<div><%= f.submit "Sign Up" %></div>
 		<% end %>
 	<% end %>

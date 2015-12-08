@@ -3,5 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  # validates_uniqueness_of :mobile_number
+  validates :mobile_number, presence: true,
+            :numericality => true,
+            :length => { :minimum => 10, :maximum => 11 }
+  validates_uniqueness_of :mobile_number
 end

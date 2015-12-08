@@ -11,7 +11,7 @@
 		  <%= devise_error_messages! %>
 		  
 		  <div>
-		  <p>Mobile number<br />
+		  <p>Mobile number (US numbers only. Please enter your area code first.)<br />
 		  <%= f.text_field :mobile_number %>
 		  </p>
 		  </div>
@@ -23,7 +23,7 @@
 		  </div>
 
 		  <div>
-		  <p>Password<br />
+		  <p>Password (Minimum length is 8 characters.)<br />
 		  <%= f.password_field :password %>
 		  </p>
 		  </div>

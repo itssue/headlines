@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar-default {
+  background-color: #fff;
+  background-image: none;
+  border-style: none;
+  border-color: #fff;
+}
+
+.welcomeform {
+	width: 60%;
+}

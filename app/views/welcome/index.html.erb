@@ -1,30 +1,32 @@
 <h2>Keep up with the news with one text a day.</h2>
 <p class="lead">With Headlines, get a text every morning to stay up-to-date on news. Stop feeling overwhelmed by TV, magazines, websites, social media feeds, newsletters.</p> 
+<br>
+<br>
 
 	<% if user_signed_in? %>
-		<p>Thank you for signing up.</p>
+		<h3>Thank you for signing up.</h3>
 		<%= link_to('Edit', edit_user_registration_path) %> <br>
 		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
 	<% else %>
-		<p>Create an account to get started.</p>
+		<h3>Create an account to get started.</h3>
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 		  <%= devise_error_messages! %>
 		  
-		  <div>
-		  <p>Mobile number (US numbers only. No hyphens or dashs, e.g. 1234567890.)<br />
-		  <%= f.text_field :mobile_number %>
+		  <div class="welcomeform">
+		  <p>Mobile number <em>(US numbers only. No hyphens or dashs, e.g. 1234567890.)</em><br />
+		  <%= f.text_field :mobile_number, class: "form-control" %>
 		  </p>
 		  </div>
 		  
-		  <div>
+		  <div class="welcomeform">
 		  <p>Email<br />
-		  <%= f.email_field :email %>
+		  <%= f.email_field :email, class: "form-control" %>
 		  </p>
 		  </div>
 
-		  <div>
+		  <div class="welcomeform">
 		  <p>Password <em>(Minimum length is 8 characters.)</em><br />
-		  <%= f.password_field :password %>
+		  <%= f.password_field :password, class: "form-control" %>
 		  </p>
 		  </div>
 
